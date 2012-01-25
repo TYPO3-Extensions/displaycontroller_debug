@@ -1,0 +1,68 @@
+/** Styles for the control panel **/
+#tx_displaycontrollerdebug_panel {
+	float: left;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 1000;
+	background-color: #000;
+	opacity: 0.9;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	padding: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+}
+#tx_displaycontrollerdebug_panel .main_check {
+	border-bottom: 1px solid #fff;
+	padding-bottom: 6px;
+}
+#tx_displaycontrollerdebug_panel fieldset {
+	margin-top: 6px;
+}
+#tx_displaycontrollerdebug_panel legend {
+	font-weight: bold;
+	padding-bottom: 8px;
+}
+#tx_displaycontrollerdebug_panel label {
+	color: #fff;
+}
+#tx_displaycontrollerdebug_panel fieldset label {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border: 1px solid;
+	padding: 2px 4px;
+}
+#tx_displaycontrollerdebug_panel p {
+	padding: 4px 0 4px 12px;
+}
+#tx_displaycontrollerdebug_panel .message_ok {
+	color: #3b7826;
+	background-color: #cdeaca;
+	border-color: #58b548;
+}
+#tx_displaycontrollerdebug_panel .message_info {
+	color: #4c73a1;
+	background-color: #eaf7ff;
+	border-color: #c5dbe6;
+}
+#tx_displaycontrollerdebug_panel .message_notice {
+	color: #777;
+	background-color: #f6f7fa;
+	border-color: #c2cbcf;
+}
+#tx_displaycontrollerdebug_panel .message_warning {
+	color: #9e7d4a;
+	background-color:#fbf6de;
+	border-color: #b1905c;
+}
+#tx_displaycontrollerdebug_panel .message_error {
+	color: #aa0225;
+	background-color: #f6d3cf;
+	border-color: #d66c68;
+}
+
+/** Styles for showing/hiding the debug output **/
+.tx_displaycontrollerdebug_hidden {
+	display: none;
+}

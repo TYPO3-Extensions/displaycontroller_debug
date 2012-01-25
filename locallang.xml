@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for extension 'displaycontroller_debug'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="debug_output">Debug Output</label>
+			<label index="message_levels">Status levels to display</label>
+			<label index="level_ok">Success</label>
+			<label index="level_info">Information</label>
+			<label index="level_notice">Notice</label>
+			<label index="level_warning">Warning</label>
+			<label index="level_error">Error</label>
+		</languageKey>
+	</data>
+</T3locallang>
