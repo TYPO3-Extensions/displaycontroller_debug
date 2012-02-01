@@ -13,6 +13,9 @@
 			<label index="level_notice">Notice</label>
 			<label index="level_warning">Warning</label>
 			<label index="level_error">Error</label>
+			<label index="javascript">JavaScript Libraries</label>
+			<label index="load_jquery">Load jQuery: Load the version of the jQuery library packaged with this extension</label>
+			<label index="load_jqueryui">Load jQuery UI: Load the version of the jQuery UI library packaged with this extension</label>
 		</languageKey>
 	</data>
 </T3locallang>

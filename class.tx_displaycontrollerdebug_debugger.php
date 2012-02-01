@@ -33,8 +33,15 @@
  * $Id: class.tx_displaycontroller_debugger.php 56548 2012-01-22 10:33:09Z francois $
  */
 class tx_displaycontrollerdebug_debugger extends tx_displaycontroller_debugger {
+	/**
+	 * @var array Extension configuration
+	 */
+	protected $extensionConfiguration;
 
 	public function __construct(t3lib_PageRenderer $pageRenderer) {
+			// Read the general configuration and initialize the debug flags
+		$this->extensionConfiguration = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['displaycontroller_debug']);
+
 		parent::__construct($pageRenderer);
 		$this->cssCode .= t3lib_div::getUrl(t3lib_extMgm::extPath('displaycontroller_debug') . 'Resources/Public/Styles/debugger.css');
 	}
@@ -50,7 +57,14 @@ class tx_displaycontrollerdebug_debugger extends tx_displaycontroller_debugger {
 			// If this is the first debug call, write the necessary CSS code
 		if ($this->firstCall) {
 			$debugOutput .= '<style>' . $this->cssCode . '</style>';
-			$debugOutput .= '<script type="text/javascript" src="' . t3lib_extMgm::extRelPath('displaycontroller_debug') . 'Resources/Public/JavaScript/jquery-ui-1.8.17.custom.min.js' . '"></script>';
+				// Add jQuery, if necessary
+			if (!empty($this->extensionConfiguration['load_jquery'])) {
+				$debugOutput .= '<script type="text/javascript" src="' . t3lib_extMgm::extRelPath('displaycontroller_debug') . 'Resources/Public/JavaScript/jquery-1.7.1.min.js' . '"></script>';
+			}
+				// Add jQuery UI, if necessary
+			if (!empty($this->extensionConfiguration['load_jqueryui'])) {
+				$debugOutput .= '<script type="text/javascript" src="' . t3lib_extMgm::extRelPath('displaycontroller_debug') . 'Resources/Public/JavaScript/jquery-ui-1.8.17.custom.min.js' . '"></script>';
+			}
 			$debugOutput .= '<script type="text/javascript" src="' . t3lib_extMgm::extRelPath('displaycontroller_debug') . 'Resources/Public/JavaScript/debugger.js' . '"></script>';
 			$debugOutput .= $this->renderControlPanel();
 			$this->firstCall = FALSE;

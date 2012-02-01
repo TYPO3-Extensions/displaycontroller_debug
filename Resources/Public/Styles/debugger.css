@@ -18,7 +18,7 @@
 	padding-bottom: 6px;
 }
 #tx_displaycontrollerdebug_panel fieldset {
-	margin-top: 6px;
+	margin: 6px 0 0 0;
 }
 #tx_displaycontrollerdebug_panel legend {
 	font-weight: bold;
@@ -32,9 +32,6 @@
 	-webkit-border-radius: 4px;
 	border: 1px solid;
 	padding: 2px 4px;
-}
-#tx_displaycontrollerdebug_panel p {
-	padding: 4px 0 4px 12px;
 }
 #tx_displaycontrollerdebug_panel .message_ok {
 	color: #3b7826;

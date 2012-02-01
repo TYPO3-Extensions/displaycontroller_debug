@@ -1,0 +1,7 @@
+# customsubcategory=javascript=LLL:EXT:displaycontroller_debug/locallang.xml:javascript
+
+# cat=basic/javascript/; type=boolean; label=LLL:EXT:displaycontroller_debug/locallang.xml:load_jquery
+load_jquery = 1
+
+# cat=basic/javascript/; type=boolean; label=LLL:EXT:displaycontroller_debug/locallang.xml:load_jqueryui
+load_jqueryui = 1
