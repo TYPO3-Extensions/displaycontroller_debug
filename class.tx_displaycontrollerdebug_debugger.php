@@ -72,7 +72,10 @@ class tx_displaycontrollerdebug_debugger extends tx_displaycontroller_debugger {
 			// Prepare the output and return it
 		$debugOutput .= '<div class="tx_displaycontrollerdebug_output">';
 		foreach ($messageQueue as $messageData) {
-			$debugOutput .= $messageData['message']->render();
+				/** @var $messageObject t3lib_FlashMessage */
+			$messageObject = $messageData['message'];
+			$debugOutput .= '<div class="tx_displaycontrollerdebug_' . $messageObject->getClass($messageObject->getSeverity()) . '">';
+			$debugOutput .= $messageObject->render();
 			if ($messageData['data'] !== NULL) {
 				if (is_array($messageData['data'])) {
 					$debugData = $messageData['data'];
@@ -80,6 +83,7 @@ class tx_displaycontrollerdebug_debugger extends tx_displaycontroller_debugger {
 					$debugData = array($messageData['data']);
 				}
 				$debugOutput .= @Kint::dump($debugData);
+				$debugOutput .= '</div>';
 			}
 		}
 		$debugOutput .= '</div>';
@@ -98,8 +102,8 @@ class tx_displaycontrollerdebug_debugger extends tx_displaycontroller_debugger {
 			<label for="tx_displaycontrollerdebug_onoff">' . $GLOBALS['TSFE']->sL('LLL:EXT:displaycontroller_debug/locallang.xml:debug_output') . '</label>
 			<input type="checkbox" id="tx_displaycontrollerdebug_onoff" value="on" />
 			</div><div stlye="clear: both"></div>';
-		$controlPanel .= '<fieldset><legend>' . $GLOBALS['TSFE']->sL('LLL:EXT:displaycontroller_debug/locallang.xml:message_levels') . '</legend>';
-		$messageLevels = array('ok', 'info', 'notice', 'warning', 'error');
+		$controlPanel .= '<fieldset id="tx_displaycontrollerdebug_levels"><legend>' . $GLOBALS['TSFE']->sL('LLL:EXT:displaycontroller_debug/locallang.xml:message_levels') . '</legend>';
+		$messageLevels = array('ok', 'information', 'notice', 'warning', 'error');
 		foreach ($messageLevels as $level) {
 			$controlPanel .= '<p>
 				<input type="checkbox" id="tx_displaycontrollerdebug_level_' . $level . '" class="message_level" value="' . $level . '" checked="checked" />

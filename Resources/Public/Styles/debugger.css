@@ -10,8 +10,8 @@
 	font-family: Arial, Helvetica, sans-serif;
 	color: #fff;
 	padding: 8px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
 }
 #tx_displaycontrollerdebug_panel .main_check {
 	border-bottom: 1px solid #fff;
@@ -38,7 +38,7 @@
 	background-color: #cdeaca;
 	border-color: #58b548;
 }
-#tx_displaycontrollerdebug_panel .message_info {
+#tx_displaycontrollerdebug_panel .message_information {
 	color: #4c73a1;
 	background-color: #eaf7ff;
 	border-color: #c5dbe6;

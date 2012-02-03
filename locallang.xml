@@ -9,7 +9,7 @@
 			<label index="debug_output">Debug Output</label>
 			<label index="message_levels">Status levels to display</label>
 			<label index="level_ok">Success</label>
-			<label index="level_info">Information</label>
+			<label index="level_information">Information</label>
 			<label index="level_notice">Notice</label>
 			<label index="level_warning">Warning</label>
 			<label index="level_error">Error</label>
