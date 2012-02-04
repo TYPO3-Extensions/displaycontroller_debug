@@ -33,6 +33,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'constraints' => array(
 		'depends' => array(
 			'displaycontroller' => '',
+			'typo3' => '4.5.0-4.6.99',
 		),
 		'conflicts' => array(
 		),

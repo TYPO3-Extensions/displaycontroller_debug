@@ -1,0 +1,52 @@
+﻿
+EXT: Display Controller Advanced Debugging
+Extension Key: displaycontroller_debug
+Language: en
+Keywords: forDevelopers, forIntermediates
+Copyright 2000-2012, François Suter, <typo3@cobweb.ch>
+
+This document is published under the Open Content License
+available from http://www.opencontent.org/opl.shtml
+
+The content of this document is related to TYPO3 
+- a GNU/GPL CMS/Framework available from www.typo3.org
+
+Table of Contents
+EXT: Display Controller Advanced Debugging	1
+Introduction	3
+What does it do?	3
+Screenshots	3
+Questions?	3
+Keeping the developer happy	3
+Credits	3
+Installation	4
+Configuration	4
+Users manual	5
+Known problems	6
+To-Do list	7
+
+Introduction
+What does it do?
+This extension provides extension "Display Controller" (and "Display Controller Advanced") with a control panel for managing the debug output in the frontend.
+Screenshots
+Questions?
+If you have any questions about this extension, you may want to refer to the Tesseract Project web site (http://www.typo3-tesseract.com/) for support and tutorials. You may also ask questions in the TYPO3 English mailing list (typo3.english).
+Keeping the developer happy
+If you like this extension, do not hesitate to rate it. Go the Extension Repository, search for this extension, click on its title to go to the details view, then click on the “Ratings” tab and vote (you need to be logged in). Every new vote keeps the developer ticking. So just do it!
+You may also take a step back and reflect about the beauty of sharing. Think about how much you are benefiting and how much yourself is giving back to the community.
+Credits
+Like extension "Display Controller", this extension relies on a library called Kint to dump the debug data in the frontend. Kint is developed by Rokas Šleinius. The project is hosted at  Google Code: http://code.google.com/p/kint/
+Installation
+This extension depends on extension "displaycontroller". Indeed it makes no sense without it. It also depends on jQuery and jQuery UI. These libraries can be loaded explicitly or used from your site, if already loaded. See "Configuration" below.
+Configuration
+This extension comes with two simple configuration options, to let it load the jQuery and jQuery UI libraries. If your site already loads either of these libraries, don't check the corresponding box and they won't be loaded a second time.
+If your site uses a JavaScript library that conflicts with jQuery, you will unfortunately not be able to use this extension.
+Users manual
+Usage of this extension is very straightforward. All you need to do is click around the control panel that appears at the top of your page.
+Unchecking the top checkbox (1) will hide all the debut output (as well as the other options of the control panel). Unchecking any of the other checkboxes (2) will hide the message with the corresponding severity level. Checking any box again will bring back the hidden elements.
+Known problems
+If you have any issues, please refer to the Tesseract Project web site (http://www.typo3-tesseract.com/). You may also post your problems to the TYPO3 English mailing list (typo3.english), so that others may benefit from the answers too. For bugs or feature requests, please open an entry in the extension's bug tracker on Forge (http://forge.typo3.org/projects/extension-displaycontroller_debug/issues).
+
+To-Do list
+The roadmap for the evolution of this extension can be found on Forge: http://forge.typo3.org/projects/roadmap/extension-  displaycontroller_debug
+For feature requests, please open a report on Forge issue tracker: http://forge.typo3.org/projects/extension-displaycontroller_debug/issues
