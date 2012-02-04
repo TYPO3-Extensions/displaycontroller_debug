@@ -7,6 +7,10 @@ $(document).ready(
 	function () {
 			// Place the control panel at the start of the body
 		$('body').prepend($('#tx_displaycontrollerdebug_panel').detach());
+			// Make sure all checkboxes are checked when the control panel is first loaded
+		$('#tx_displaycontrollerdebug_panel input[type="checkbox"]').each(function() {
+			$(this).attr('checked', true);
+		});
 			// Make it draggable
 		$('#tx_displaycontrollerdebug_panel').draggable();
 			// Enable the main switch

@@ -100,7 +100,7 @@ class tx_displaycontrollerdebug_debugger extends tx_displaycontroller_debugger {
 		$controlPanel = '<div id="tx_displaycontrollerdebug_panel">';
 		$controlPanel .= '<div class="main_check">
 			<label for="tx_displaycontrollerdebug_onoff">' . $GLOBALS['TSFE']->sL('LLL:EXT:displaycontroller_debug/locallang.xml:debug_output') . '</label>
-			<input type="checkbox" id="tx_displaycontrollerdebug_onoff" value="on" />
+			<input type="checkbox" id="tx_displaycontrollerdebug_onoff" value="on" checked="checked" />
 			</div><div stlye="clear: both"></div>';
 		$controlPanel .= '<fieldset id="tx_displaycontrollerdebug_levels"><legend>' . $GLOBALS['TSFE']->sL('LLL:EXT:displaycontroller_debug/locallang.xml:message_levels') . '</legend>';
 		$messageLevels = array('ok', 'information', 'notice', 'warning', 'error');
