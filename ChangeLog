@@ -1,6 +1,7 @@
 2012-02-07 Francois Suter (Cobweb)  <typo3@cobweb.ch>
 
 	* Corrected a compatibility issue with TYPO3 4.5 regarding flash messages usage, resolves #33740
+	* Released to TER as version 1.0.1
 
 2012-02-06 Francois Suter (Cobweb)  <typo3@cobweb.ch>
 
