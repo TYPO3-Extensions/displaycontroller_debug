@@ -37,6 +37,13 @@ class tx_displaycontrollerdebug_debugger extends tx_displaycontroller_debugger {
 	 * @var array Extension configuration
 	 */
 	protected $extensionConfiguration;
+	static $messageLevels = array(
+		t3lib_FlashMessage::OK => 'ok',
+		t3lib_FlashMessage::INFO => 'information',
+		t3lib_FlashMessage::NOTICE => 'notice',
+		t3lib_FlashMessage::WARNING => 'warning',
+		t3lib_FlashMessage::ERROR => 'error'
+	);
 
 	public function __construct(t3lib_PageRenderer $pageRenderer) {
 			// Read the general configuration and initialize the debug flags
@@ -74,7 +81,7 @@ class tx_displaycontrollerdebug_debugger extends tx_displaycontroller_debugger {
 		foreach ($messageQueue as $messageData) {
 				/** @var $messageObject t3lib_FlashMessage */
 			$messageObject = $messageData['message'];
-			$debugOutput .= '<div class="tx_displaycontrollerdebug_' . $messageObject->getClass($messageObject->getSeverity()) . '">';
+			$debugOutput .= '<div class="tx_displaycontrollerdebug_' . self::$messageLevels[$messageObject->getSeverity()] . '">';
 			$debugOutput .= $messageObject->render();
 			if ($messageData['data'] !== NULL) {
 				if (is_array($messageData['data'])) {
@@ -103,8 +110,7 @@ class tx_displaycontrollerdebug_debugger extends tx_displaycontroller_debugger {
 			<input type="checkbox" id="tx_displaycontrollerdebug_onoff" value="on" checked="checked" />
 			</div><div stlye="clear: both"></div>';
 		$controlPanel .= '<fieldset id="tx_displaycontrollerdebug_levels"><legend>' . $GLOBALS['TSFE']->sL('LLL:EXT:displaycontroller_debug/locallang.xml:message_levels') . '</legend>';
-		$messageLevels = array('ok', 'information', 'notice', 'warning', 'error');
-		foreach ($messageLevels as $level) {
+		foreach (self::$messageLevels as $level) {
 			$controlPanel .= '<p>
 				<input type="checkbox" id="tx_displaycontrollerdebug_level_' . $level . '" class="message_level" value="' . $level . '" checked="checked" />
 				<label for="tx_displaycontrollerdebug_level_' . $level . '" class="message_' . $level . '">' . $GLOBALS['TSFE']->sL('LLL:EXT:displaycontroller_debug/locallang.xml:level_' . $level) . '</label>
