@@ -1,3 +1,7 @@
+2013-06-14 Francois Suter (Cobweb)  <typo3@cobweb.ch>
+
+	* Marked this extension as obsolete, resolves #49130
+
 2012-02-07 Francois Suter (Cobweb)  <typo3@cobweb.ch>
 
 	* Corrected a compatibility issue with TYPO3 4.5 regarding flash messages usage, resolves #33740

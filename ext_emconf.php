@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Display Controller advanced debugging',
-	'description' => 'Provides a floating panel for controlling the output of the Display Controller\'s debugging.',
+	'description' => 'Provides a floating panel for controlling the output of the Display Controller\'s debugging. Not maintained anymore.',
 	'category' => 'fe',
 	'author' => 'Francois Suter (Cobweb)',
 	'author_email' => 'typo3@cobweb.ch',
@@ -21,7 +21,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'conflicts' => '',
 	'priority' => '',
 	'module' => '',
-	'state' => 'stable',
+	'state' => 'obsolete',
 	'internal' => '',
 	'uploadfolder' => 0,
 	'createDirs' => '',
